@@ -1,10 +1,10 @@
 import "./App.css";
-import TrueHireLanding from "./pages/TrueHireLanding";
+import TrueQuoLanding from "./pages/TrueQuoLanding";
 
 function App() {
   return (
     <>
-      <TrueHireLanding />
+      <TrueQuoLanding />
     </>
   );
 }
