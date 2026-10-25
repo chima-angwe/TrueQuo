@@ -5,7 +5,7 @@ import "./TrueQuoLanding.css";
 const PORTAL_URL = "https://chima-angwe.github.io/truequo-portal/";
 const WAITLIST_URL = "https://truequo-backend.onrender.com/api/waitlist";
 const BRAND_MARK = `${import.meta.env.BASE_URL}truequo-mark.svg`;
-const VIDEO_URL = ""; // Add the walkthrough video link here when it is ready.
+const VIDEO_URL = "https://youtu.be/TfrHb51fTlQ"; // Add the walkthrough video link here when it is ready.
 
 function getWalkthroughEmbedUrl(value) {
   if (!value) return "";
