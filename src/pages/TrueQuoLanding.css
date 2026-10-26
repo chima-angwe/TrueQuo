@@ -19,29 +19,55 @@
 
 .hero-check-types {
   max-width: 610px;
-  margin: 12px 0 0;
+  margin: 12px 0 24px;
   color: var(--ink-muted, #77736d);
   font-size: 0.96rem;
   line-height: 1.65;
 }
 
+.case-example-label {
+  margin: 0 0 12px;
+  color: #718079;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.case-example-details {
+  display: grid;
+  gap: 7px;
+  padding: 13px 0 0;
+  color: #76817b;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+.case-example-details p {
+  margin: 0;
+}
+
+.case-example-details strong {
+  color: #34443e;
+  font-size: 8px;
+  letter-spacing: 0.07em;
+}
+
 .walkthrough-section {
-  padding: clamp(64px, 8vw, 112px) 24px;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 110px 40px 120px;
   scroll-margin-top: 24px;
 }
 
 .walkthrough-inner {
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
 }
 
-.walkthrough-inner > .eyebrow {
-  display: inline-flex;
-}
-
-.walkthrough-inner h2 {
-  margin: 18px 0 32px;
+.walkthrough-heading {
+  margin-bottom: 38px;
 }
 
 .walkthrough-frame {
@@ -104,17 +130,20 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 900px) {
+  .walkthrough-section {
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}
+
+@media (max-width: 680px) {
   .header-signin {
     display: none;
   }
 
   .walkthrough-section {
-    padding: 64px 16px;
-  }
-
-  .walkthrough-inner h2 {
-    margin-bottom: 24px;
+    padding: 76px 22px 82px;
   }
 
   .walkthrough-frame {

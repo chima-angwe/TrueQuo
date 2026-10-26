@@ -45,6 +45,7 @@ function WorkflowPreview() {
         <span className="case-preview-status"><i /> In progress</span>
       </div>
       <div className="case-preview-content">
+        <div className="case-example-label">Example case</div>
         <div className="case-preview-table" role="table" aria-label="Case summary">
           <div className="case-preview-head" role="row"><span role="columnheader">Case</span><span role="columnheader">Candidate</span><span role="columnheader">Check</span><span role="columnheader">Status</span></div>
           <div className="case-preview-row" role="row">
@@ -53,6 +54,10 @@ function WorkflowPreview() {
             <span className="case-preview-check" role="cell"><strong>Employment</strong><span>Zenith Bank</span></span>
             <span className="case-preview-row-status" role="cell"><i /> In progress</span>
           </div>
+        </div>
+        <div className="case-example-details" aria-label="Example verification details">
+          <p><strong>CLAIMED:</strong> Zenith Bank · Customer Service Officer</p>
+          <p><strong>CHECKED BY:</strong> Samuel Okoro, verifier</p>
         </div>
         <div className="case-progress-heading"><span>CASE PROGRESS</span><span>Step 3 of 4</span></div>
         <div className="case-flow" aria-label="Received, assigned, verifying, then reviewed">
@@ -149,10 +154,10 @@ function TrueQuoLanding() {
 
       <section className="hero" id="home">
         <div className="hero-copy">
-          <span className="eyebrow hero-eyebrow"><span className="eyebrow-line" /> BUILT FOR VERIFICATION OPERATIONS</span>
-          <h1>Keep every verification case <em>moving.</em></h1>
-          <p className="hero-lede">TrueQuo gives background verification teams one place to coordinate checks, follow progress and review findings—from intake through completion.</p>
-          <p className="hero-check-types">Employment, education, ID, address and reference checks, tracked from request to sign-off.</p>
+          <span className="eyebrow hero-eyebrow"><span className="eyebrow-line" /> FOR BACKGROUND VERIFICATION TEAMS</span>
+          <h1>Know what was claimed, who checked it, and <em>who approved it.</em></h1>
+          <p className="hero-lede">A candidate claims where they worked, studied and live. Your team checks it. TrueQuo keeps every claim, check and sign-off in one case, so nothing gets lost between request and report.</p>
+          <p className="hero-check-types">Candidate claims tracked: employment, education, ID, address, references.</p>
           <div className="hero-actions"><a className="button button-primary" href="#walkthrough">Watch the 1-minute walkthrough <Arrow diagonal /></a><a className="text-link" href="#waitlist">Join the waitlist <Arrow /></a></div>
           <div className="hero-proof"><span className="proof-check">✓</span><span>Designed around the day-to-day work of verification teams</span></div>
         </div>
@@ -169,13 +174,17 @@ function TrueQuoLanding() {
 
       <section className="workflow-section" id="workflow">
         <div className="section-intro"><span className="eyebrow">FROM REQUEST TO REVIEW</span><h2>The work has many steps.<br /><em>Keep them connected.</em></h2><p>Each case can involve multiple checks, people and follow-ups. TrueQuo helps your team keep the moving parts and their status together.</p></div>
-        <div className="steps-track">{[{n:"01",t:"Receive",d:"Capture the request and the checks needed."},{n:"02",t:"Assign",d:"Route tasks to the people doing the work."},{n:"03",t:"Verify",d:"Record findings and manage follow-ups."},{n:"04",t:"Review",d:"Review work before the case is completed."}].map((step, i) => <div className="step" key={step.n}><div className="step-top"><span>{step.n}</span>{i < 3 && <i />}</div><h3>{step.t}</h3><p>{step.d}</p></div>)}</div>
+        <div className="steps-track">{[{n:"01",t:"Receive",d:"A request arrives with the candidate's claims."},{n:"02",t:"Assign",d:"Route each check to the right verifier."},{n:"03",t:"Verify",d:"Record findings and chase responses."},{n:"04",t:"Review",d:"A supervisor signs off before the case closes."}].map((step, i) => <div className="step" key={step.n}><div className="step-top"><span>{step.n}</span>{i < 3 && <i />}</div><h3>{step.t}</h3><p>{step.d}</p></div>)}</div>
       </section>
 
       <section className="walkthrough-section" id="walkthrough" aria-labelledby="walkthrough-title">
         <div className="walkthrough-inner">
-          <span className="eyebrow">SEE IT IN ONE MINUTE</span>
-          <h2 id="walkthrough-title">One case, from request<br /><em>to sign-off.</em></h2>
+          <div className="capabilities-heading walkthrough-heading">
+            <div>
+              <span className="eyebrow">SEE IT IN ONE MINUTE</span>
+              <h2 id="walkthrough-title">See one claim get checked,<br /><em>start to finish.</em></h2>
+            </div>
+          </div>
           <div className="walkthrough-frame">
             {WALKTHROUGH_EMBED_URL ? (
               <iframe src={WALKTHROUGH_EMBED_URL} title="TrueQuo one-minute case walkthrough" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
@@ -192,7 +201,7 @@ function TrueQuoLanding() {
         <div className="capability-grid">{capabilities.map((item) => <article className="capability-card" key={item.number}><span className="capability-number">{item.number}</span><div className="capability-icon">{item.number === "01" ? "▤" : item.number === "02" ? "↗" : "✓"}</div><h3>{item.title}</h3><p>{item.text}</p><span className="card-arrow"><Arrow /></span></article>)}</div>
       </section>
 
-      <section className="closing-cta"><div className="closing-orb" /><div className="closing-content"><span className="eyebrow">SEE THE PRODUCT</span><h2>Take a closer look at<br /><em>verification work in motion.</em></h2><p>See how a case moves from request to review.</p><div className="closing-actions"><a className="button button-light" href="#walkthrough">Watch the walkthrough <Arrow diagonal /></a><a className="closing-waitlist" href="#waitlist">Join the waitlist <Arrow /></a></div></div><div className="closing-mark" aria-hidden="true">T</div></section>
+      <section className="closing-cta"><div className="closing-orb" /><div className="closing-content"><span className="eyebrow">SEE THE PRODUCT</span><h2>Take a closer look at<br /><em>Background-verification work in motion.</em></h2><p>See how a case moves from request to review.</p><div className="closing-actions"><a className="button button-light" href="#walkthrough">Watch the walkthrough <Arrow diagonal /></a><a className="closing-waitlist" href="#waitlist">Join the waitlist <Arrow /></a></div></div><div className="closing-mark" aria-hidden="true">T</div></section>
 
       <footer className="site-footer"><a className="wordmark footer-wordmark" href="#home"><img className="wordmark-mark" src={BRAND_MARK} alt="" /><span><span className="wordmark-t">T</span>rue<span className="wordmark-q">Q</span>uo</span></a><span>Verification work, brought into view.</span><a href={PORTAL_URL} target="_blank" rel="noopener noreferrer">Sign in</a><small>© {new Date().getFullYear()} TrueQuo</small></footer>
     </main>
